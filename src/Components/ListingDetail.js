@@ -151,7 +151,7 @@ function ListingDetail() {
 		async function GetListingInfo() {
 			try {
 				const response = await Axios.get(
-					`http://localhost:8000/api/listings/${params.id}/`
+					`https://www.lbrepcourseapi.com/api/listings/${params.id}/`
 				);
 				console.log(response.data);
 				dispatch({
@@ -171,7 +171,7 @@ function ListingDetail() {
 			async function GetProfileInfo() {
 				try {
 					const response = await Axios.get(
-						`http://localhost:8000/api/profiles/${state.listingInfo.seller}/`
+						`https://www.lbrepcourseapi.com/api/profiles/${state.listingInfo.seller}/`
 					);
 					console.log(response.data);
 					dispatch({
@@ -225,7 +225,7 @@ function ListingDetail() {
 		if (confirmDelete) {
 			try {
 				const response = await Axios.delete(
-					`http://localhost:8000/api/listings/${params.id}/delete/`
+					`https://www.lbrepcourseapi.com/api/listings/${params.id}/delete/`
 				);
 				console.log(response.data);
 				dispatch({ type: "openTheSnack" });

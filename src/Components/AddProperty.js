@@ -978,7 +978,7 @@ function AddProperty() {
 		async function GetProfileInfo() {
 			try {
 				const response = await Axios.get(
-					`http://localhost:8000/api/profiles/${GlobalState.userId}/`
+					`https://www.lbrepcourseapi.com/api/profiles/${GlobalState.userId}/`
 				);
 				console.log(response.data);
 				dispatch({
@@ -1057,7 +1057,7 @@ function AddProperty() {
 
 				try {
 					const response = await Axios.post(
-						"http://localhost:8000/api/listings/create/",
+						"https://www.lbrepcourseapi.com/api/listings/create/",
 						formData
 					);
 					console.log(response.data);

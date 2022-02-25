@@ -113,7 +113,7 @@ function Login() {
 			async function SignIn() {
 				try {
 					const response = await Axios.post(
-						"http://localhost:8000/api-auth-djoser/token/login/",
+						"https://www.lbrepcourseapi.com/api-auth-djoser/token/login/",
 						{
 							username: state.usernameValue,
 							password: state.passwordValue,
@@ -152,7 +152,7 @@ function Login() {
 			async function GetUserInfo() {
 				try {
 					const response = await Axios.get(
-						"http://localhost:8000/api-auth-djoser/users/me/",
+						"https://www.lbrepcourseapi.com/api-auth-djoser/users/me/",
 						{
 							headers: { Authorization: "Token ".concat(state.token) },
 						},

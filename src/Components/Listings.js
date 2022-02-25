@@ -132,7 +132,7 @@ function Listings() {
 		async function GetAllListings() {
 			try {
 				const response = await Axios.get(
-					"http://lbrepcourseapi.com/api/listings/",
+					"https://www.lbrepcourseapi.com/api/listings/",
 					{ cancelToken: source.token }
 				);
 				// console.log(response.data);

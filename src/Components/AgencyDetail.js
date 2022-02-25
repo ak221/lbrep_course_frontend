@@ -73,7 +73,7 @@ function AgencyDetail() {
 		async function GetProfileInfo() {
 			try {
 				const response = await Axios.get(
-					`http://localhost:8000/api/profiles/${params.id}/`
+					`https://www.lbrepcourseapi.com/api/profiles/${params.id}/`
 				);
 				console.log(response.data);
 				dispatch({
@@ -169,8 +169,8 @@ function AgencyDetail() {
 									component="img"
 									height="140"
 									image={
-										`http://localhost:8000${listing.picture1}`
-											? `http://localhost:8000${listing.picture1}`
+										`https://www.lbrepcourseapi.com${listing.picture1}`
+											? `https://www.lbrepcourseapi.com${listing.picture1}`
 											: defaultProfilePicture
 									}
 									alt="Listing Picture"
