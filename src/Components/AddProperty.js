@@ -980,21 +980,19 @@ function AddProperty() {
 				const response = await Axios.get(
 					`https://www.lbrepcourseapi.com/api/profiles/${GlobalState.userId}/`
 				);
-				console.log(response.data);
+
 				dispatch({
 					type: "catchUserProfileInfo",
 					profileObject: response.data,
 				});
-			} catch (e) {
-				console.log(e.response);
-			}
+			} catch (e) {}
 		}
 		GetProfileInfo();
 	}, []);
 
 	function FormSubmit(e) {
 		e.preventDefault();
-		console.log("the form has been submitted");
+
 		if (
 			!state.titleErrors.hasErrors &&
 			!state.listingTypeErrors.hasErrors &&
@@ -1060,11 +1058,10 @@ function AddProperty() {
 						"https://www.lbrepcourseapi.com/api/listings/create/",
 						formData
 					);
-					console.log(response.data);
+
 					dispatch({ type: "openTheSnack" });
 				} catch (e) {
 					dispatch({ type: "allowTheButton" });
-					console.log(e.response);
 				}
 			}
 			AddProperty();

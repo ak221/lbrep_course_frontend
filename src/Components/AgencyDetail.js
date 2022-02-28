@@ -75,15 +75,13 @@ function AgencyDetail() {
 				const response = await Axios.get(
 					`https://www.lbrepcourseapi.com/api/profiles/${params.id}/`
 				);
-				console.log(response.data);
+
 				dispatch({
 					type: "catchUserProfileInfo",
 					profileObject: response.data,
 				});
 				dispatch({ type: "loadingDone" });
-			} catch (e) {
-				console.log(e.response);
-			}
+			} catch (e) {}
 		}
 		GetProfileInfo();
 	}, []);

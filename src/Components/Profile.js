@@ -100,15 +100,13 @@ function Profile() {
 				const response = await Axios.get(
 					`https://www.lbrepcourseapi.com/api/profiles/${GlobalState.userId}/`
 				);
-				console.log(response.data);
+
 				dispatch({
 					type: "catchUserProfileInfo",
 					profileObject: response.data,
 				});
 				dispatch({ type: "loadingDone" });
-			} catch (e) {
-				console.log(e.response);
-			}
+			} catch (e) {}
 		}
 		GetProfileInfo();
 	}, []);

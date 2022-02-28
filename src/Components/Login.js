@@ -102,7 +102,7 @@ function Login() {
 
 	function FormSubmit(e) {
 		e.preventDefault();
-		console.log("the form has been submitted");
+
 		dispatch({ type: "changeSendRequest" });
 		dispatch({ type: "disableTheButton" });
 	}
@@ -122,7 +122,7 @@ function Login() {
 							cancelToken: source.token,
 						}
 					);
-					console.log(response);
+
 					dispatch({
 						type: "catchToken",
 						tokenValue: response.data.auth_token,
@@ -133,7 +133,6 @@ function Login() {
 					});
 					// navigate("/");
 				} catch (error) {
-					console.log(error.response);
 					dispatch({ type: "allowTheButton" });
 					dispatch({ type: "catchServerError" });
 				}
@@ -160,7 +159,7 @@ function Login() {
 							cancelToken: source.token,
 						}
 					);
-					console.log(response);
+
 					GlobalDispatch({
 						type: "userSignsIn",
 						usernameInfo: response.data.username,
@@ -168,9 +167,7 @@ function Login() {
 						IdInfo: response.data.id,
 					});
 					dispatch({ type: "openTheSnack" });
-				} catch (error) {
-					console.log(error.response);
-				}
+				} catch (error) {}
 			}
 			GetUserInfo();
 			return () => {

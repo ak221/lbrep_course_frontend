@@ -153,14 +153,12 @@ function ListingDetail() {
 				const response = await Axios.get(
 					`https://www.lbrepcourseapi.com/api/listings/${params.id}/`
 				);
-				console.log(response.data);
+
 				dispatch({
 					type: "catchListingInfo",
 					listingObject: response.data,
 				});
-			} catch (e) {
-				console.log(e.response);
-			}
+			} catch (e) {}
 		}
 		GetListingInfo();
 	}, []);
@@ -173,15 +171,13 @@ function ListingDetail() {
 					const response = await Axios.get(
 						`https://www.lbrepcourseapi.com/api/profiles/${state.listingInfo.seller}/`
 					);
-					console.log(response.data);
+
 					dispatch({
 						type: "catchSellerProfileInfo",
 						profileObject: response.data,
 					});
 					dispatch({ type: "loadingDone" });
-				} catch (e) {
-					console.log(e.response);
-				}
+				} catch (e) {}
 			}
 			GetProfileInfo();
 		}
@@ -227,12 +223,11 @@ function ListingDetail() {
 				const response = await Axios.delete(
 					`https://www.lbrepcourseapi.com/api/listings/${params.id}/delete/`
 				);
-				console.log(response.data);
+
 				dispatch({ type: "openTheSnack" });
 				dispatch({ type: "disableTheButton" });
 			} catch (e) {
 				dispatch({ type: "allowTheButton" });
-				console.log(e.response.data);
 			}
 		}
 	}

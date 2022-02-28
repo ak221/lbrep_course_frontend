@@ -64,15 +64,13 @@ function Agencies() {
 				const response = await Axios.get(
 					`https://www.lbrepcourseapi.com/api/profiles/`
 				);
-				console.log(response.data);
+
 				dispatch({
 					type: "catchAgencies",
 					agenciesArray: response.data,
 				});
 				dispatch({ type: "loadingDone" });
-			} catch (e) {
-				console.log(e.response);
-			}
+			} catch (e) {}
 		}
 		GetAgencies();
 	}, []);

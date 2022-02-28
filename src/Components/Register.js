@@ -178,7 +178,7 @@ function Register() {
 
 	function FormSubmit(e) {
 		e.preventDefault();
-		console.log("the form has been submitted");
+
 		if (
 			!state.usernameErrors.hasErrors &&
 			!state.emailErrors.hasErrors &&
@@ -207,11 +207,11 @@ function Register() {
 							cancelToken: source.token,
 						}
 					);
-					console.log(response);
+
 					dispatch({ type: "openTheSnack" });
 				} catch (error) {
 					dispatch({ type: "allowTheButton" });
-					console.log(error.response);
+
 					if (error.response.data.username) {
 						dispatch({ type: "usernameExists" });
 					} else if (error.response.data.email) {

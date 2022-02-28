@@ -64,10 +64,6 @@ const useStyles = makeStyles({
 });
 
 function Listings() {
-	// fetch("http://localhost:8000/api/listings/")
-	// 	.then((response) => response.json())
-	// 	.then((data) => console.log(data));
-
 	const navigate = useNavigate();
 	const classes = useStyles();
 	const houseIcon = new Icon({
@@ -135,22 +131,16 @@ function Listings() {
 					"https://www.lbrepcourseapi.com/api/listings/",
 					{ cancelToken: source.token }
 				);
-				// console.log(response.data);
+
 				setAllListings(response.data);
 				setDataIsLoading(false);
-			} catch (error) {
-				console.log(error.response);
-			}
+			} catch (error) {}
 		}
 		GetAllListings();
 		return () => {
 			source.cancel();
 		};
 	}, []);
-
-	if (dataIsLoading === false) {
-		console.log(allListings[0].location);
-	}
 
 	if (dataIsLoading === true) {
 		return (

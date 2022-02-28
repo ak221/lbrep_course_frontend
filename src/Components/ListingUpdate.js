@@ -201,7 +201,7 @@ function ListingUpdate(props) {
 
 	function FormSubmit(e) {
 		e.preventDefault();
-		console.log("the form has been submitted");
+
 		dispatch({ type: "changeSendRequest" });
 		dispatch({ type: "disableTheButton" });
 	}
@@ -245,10 +245,9 @@ function ListingUpdate(props) {
 						`https://www.lbrepcourseapi.com/api/listings/${props.listingData.id}/update/`,
 						formData
 					);
-					console.log(response.data);
+
 					dispatch({ type: "openTheSnack" });
 				} catch (e) {
-					console.log(e.response);
 					dispatch({ type: "allowTheButton" });
 				}
 			}
