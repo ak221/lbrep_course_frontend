@@ -166,10 +166,13 @@ function AgencyDetail() {
 								<CardMedia
 									component="img"
 									height="140"
+									// image={
+									// 	`https://www.lbrepcourseapi.com${listing.picture1}`
+									// 		? `https://www.lbrepcourseapi.com${listing.picture1}`
+									// 		: defaultProfilePicture
+									// }
 									image={
-										`https://www.lbrepcourseapi.com${listing.picture1}`
-											? `https://www.lbrepcourseapi.com${listing.picture1}`
-											: defaultProfilePicture
+										listing.picture1 ? listing.picture1 : defaultProfilePicture
 									}
 									alt="Listing Picture"
 									onClick={() => navigate(`/listings/${listing.id}`)}
