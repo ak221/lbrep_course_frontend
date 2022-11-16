@@ -23,7 +23,7 @@ function Home() {
 						position: "absolute",
 						zIndex: "100",
 						top: "100px",
-						left: "21px",
+						left: "20px",
 						textAlign: "center",
 					}}
 				>
