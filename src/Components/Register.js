@@ -17,30 +17,8 @@ import {
 	Snackbar,
 	Alert,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({
-	formContainer: {
-		width: "50%",
-		marginLeft: "auto",
-		marginRight: "auto",
-		marginTop: "3rem",
-		border: "5px solid black",
-		padding: "3rem",
-	},
-	registerBtn: {
-		backgroundColor: "green",
-		color: "white",
-		fontSize: "1.1rem",
-		marginLeft: "1rem",
-		"&:hover": {
-			backgroundColor: "blue",
-		},
-	},
-});
 
 function Register() {
-	const classes = useStyles();
 	const navigate = useNavigate();
 
 	const initialState = {
@@ -249,7 +227,16 @@ function Register() {
 	}, [state.openSnack]);
 
 	return (
-		<div className={classes.formContainer}>
+		<div
+			style={{
+				width: "50%",
+				marginLeft: "auto",
+				marginRight: "auto",
+				marginTop: "3rem",
+				border: "5px solid black",
+				padding: "3rem",
+			}}
+		>
 			<form onSubmit={FormSubmit}>
 				<Grid item container justifyContent="center">
 					<Typography variant="h4">CREATE AN ACCOUNT</Typography>
@@ -382,7 +369,15 @@ function Register() {
 						variant="contained"
 						fullWidth
 						type="submit"
-						className={classes.registerBtn}
+						style={{
+							backgroundColor: "green",
+							color: "white",
+							fontSize: "1.1rem",
+							marginLeft: "1rem",
+							"&:hover": {
+								backgroundColor: "blue",
+							},
+						}}
 						disabled={state.disabledBtn}
 					>
 						SIGN UP

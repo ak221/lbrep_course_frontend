@@ -27,7 +27,7 @@ import {
 	IconButton,
 	CardActions,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+
 import RoomIcon from "@mui/icons-material/Room";
 
 // Map icons
@@ -39,33 +39,8 @@ import img1 from "./Assets/img1.jpg";
 import myListings from "./Assets/Data/Dummydata";
 import polygonOne from "./Shape";
 
-const useStyles = makeStyles({
-	cardStyle: {
-		margin: "0.5rem",
-		border: "1px solid black",
-		position: "relative",
-	},
-	pictureStyle: {
-		paddingRight: "1rem",
-		paddingLeft: "1rem",
-		height: "20rem",
-		width: "30rem",
-		cursor: "pointer",
-	},
-	priceOverlay: {
-		position: "absolute",
-		backgroundColor: "green",
-		zIndex: "1000",
-		color: "white",
-		top: "100px",
-		left: "20px",
-		padding: "5px",
-	},
-});
-
 function Listings() {
 	const navigate = useNavigate();
-	const classes = useStyles();
 	const houseIcon = new Icon({
 		iconUrl: houseIconPng,
 		iconSize: [40, 40],
@@ -160,7 +135,14 @@ function Listings() {
 			<Grid item xs={4}>
 				{allListings.map((listing) => {
 					return (
-						<Card key={listing.id} className={classes.cardStyle}>
+						<Card
+							key={listing.id}
+							style={{
+								margin: "0.5rem",
+								border: "1px solid black",
+								position: "relative",
+							}}
+						>
 							<CardHeader
 								action={
 									<IconButton
@@ -178,7 +160,13 @@ function Listings() {
 								title={listing.title}
 							/>
 							<CardMedia
-								className={classes.pictureStyle}
+								style={{
+									paddingRight: "1rem",
+									paddingLeft: "1rem",
+									height: "20rem",
+									width: "30rem",
+									cursor: "pointer",
+								}}
 								component="img"
 								image={listing.picture1}
 								alt={listing.title}
@@ -191,14 +179,34 @@ function Listings() {
 							</CardContent>
 
 							{listing.property_status === "Sale" ? (
-								<Typography className={classes.priceOverlay}>
+								<Typography
+									style={{
+										position: "absolute",
+										backgroundColor: "green",
+										zIndex: "1000",
+										color: "white",
+										top: "100px",
+										left: "20px",
+										padding: "5px",
+									}}
+								>
 									{listing.listing_type}: $
 									{listing.price
 										.toString()
 										.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
 								</Typography>
 							) : (
-								<Typography className={classes.priceOverlay}>
+								<Typography
+									style={{
+										position: "absolute",
+										backgroundColor: "green",
+										zIndex: "1000",
+										color: "white",
+										top: "100px",
+										left: "20px",
+										padding: "5px",
+									}}
+								>
 									{listing.listing_type}: $
 									{listing.price
 										.toString()

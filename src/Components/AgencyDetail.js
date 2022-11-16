@@ -28,12 +28,7 @@ import {
 } from "@mui/material";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({});
-
 function AgencyDetail() {
-	const classes = useStyles();
 	const navigate = useNavigate();
 	const GlobalState = useContext(StateContext);
 

@@ -13,7 +13,6 @@ import {
 	MenuItem,
 	Snackbar,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 
 // Contexts
 import StateContext from "../Contexts/StateContext";
@@ -22,58 +21,7 @@ import DispatchContext from "../Contexts/DispatchContext";
 // Components
 import CustomCard from "./CustomCard";
 
-const useStyles = makeStyles({
-	leftNav: {
-		marginRight: "auto",
-	},
-
-	rightNav: {
-		marginLeft: "auto",
-		marginRight: "10rem",
-	},
-
-	propertyBtn: {
-		backgroundColor: "green",
-		color: "white",
-		width: "15rem",
-		fontSize: "1.1rem",
-		marginRight: "1rem",
-		"&:hover": {
-			backgroundColor: "blue",
-		},
-	},
-
-	loginBtn: {
-		backgroundColor: "white",
-		color: "black",
-		width: "15rem",
-		fontSize: "1.1rem",
-		marginLeft: "1rem",
-		"&:hover": {
-			backgroundColor: "green",
-		},
-	},
-
-	profileBtn: {
-		color: "black",
-		backgroundColor: "green",
-		width: "15rem",
-		fontWeight: "bolder",
-		borderRadius: "15px",
-		marginBottom: "0.25rem",
-	},
-
-	logoutBtn: {
-		color: "black",
-		backgroundColor: "red",
-		width: "15rem",
-		fontWeight: "bolder",
-		borderRadius: "15px",
-	},
-});
-
 function Header() {
-	const classes = useStyles();
 	const navigate = useNavigate();
 	const GlobalState = useContext(StateContext);
 	const GlobalDispatch = useContext(DispatchContext);
@@ -122,7 +70,7 @@ function Header() {
 	return (
 		<AppBar position="static" style={{ backgroundColor: "black" }}>
 			<Toolbar>
-				<div className={classes.leftNav}>
+				<div style={{ marginRight: "auto" }}>
 					<Button color="inherit" onClick={() => navigate("/")}>
 						<Typography variant="h4">LBREP</Typography>{" "}
 					</Button>
@@ -144,17 +92,35 @@ function Header() {
 						<Typography variant="h6">Agencies</Typography>{" "}
 					</Button>
 				</div>
-				<div className={classes.rightNav}>
+				<div style={{ marginLeft: "auto", marginRight: "10rem" }}>
 					<Button
 						onClick={() => navigate("/addproperty")}
-						className={classes.propertyBtn}
+						style={{
+							backgroundColor: "green",
+							color: "white",
+							width: "15rem",
+							fontSize: "1.1rem",
+							marginRight: "1rem",
+							"&:hover": {
+								backgroundColor: "blue",
+							},
+						}}
 					>
 						Add Property
 					</Button>
 
 					{GlobalState.userIsLogged ? (
 						<Button
-							className={classes.loginBtn}
+							style={{
+								backgroundColor: "white",
+								color: "black",
+								width: "15rem",
+								fontSize: "1.1rem",
+								marginLeft: "1rem",
+								"&:hover": {
+									backgroundColor: "green",
+								},
+							}}
 							onClick={handleClick}
 							// onClick={() => navigate("/login")}
 						>
@@ -162,7 +128,16 @@ function Header() {
 						</Button>
 					) : (
 						<Button
-							className={classes.loginBtn}
+							style={{
+								backgroundColor: "white",
+								color: "black",
+								width: "15rem",
+								fontSize: "1.1rem",
+								marginLeft: "1rem",
+								"&:hover": {
+									backgroundColor: "green",
+								},
+							}}
 							onClick={() => navigate("/login")}
 						>
 							Login
@@ -178,10 +153,29 @@ function Header() {
 							"aria-labelledby": "basic-button",
 						}}
 					>
-						<MenuItem className={classes.profileBtn} onClick={HandleProfile}>
+						<MenuItem
+							style={{
+								color: "black",
+								backgroundColor: "green",
+								width: "15rem",
+								fontWeight: "bolder",
+								borderRadius: "15px",
+								marginBottom: "0.25rem",
+							}}
+							onClick={HandleProfile}
+						>
 							Profile
 						</MenuItem>
-						<MenuItem className={classes.logoutBtn} onClick={HandleLogout}>
+						<MenuItem
+							style={{
+								color: "black",
+								backgroundColor: "red",
+								width: "15rem",
+								fontWeight: "bolder",
+								borderRadius: "15px",
+							}}
+							onClick={HandleLogout}
+						>
 							Logout
 						</MenuItem>
 					</Menu>

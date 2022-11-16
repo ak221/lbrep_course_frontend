@@ -53,41 +53,7 @@ import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import RoomIcon from "@mui/icons-material/Room";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({
-	sliderContainer: {
-		position: "relative",
-		marginTop: "1rem",
-	},
-
-	leftArrow: {
-		position: "absolute",
-		cursor: "pointer",
-		fontSize: "3rem",
-		color: "white",
-		top: "50%",
-		left: "27.5%",
-		"&:hover": {
-			backgroundColor: "green",
-		},
-	},
-
-	rightArrow: {
-		position: "absolute",
-		cursor: "pointer",
-		fontSize: "3rem",
-		color: "white",
-		top: "50%",
-		right: "27.5%",
-		"&:hover": {
-			backgroundColor: "green",
-		},
-	},
-});
-
 function ListingDetail() {
-	const classes = useStyles();
 	const navigate = useNavigate();
 	const GlobalState = useContext(StateContext);
 
@@ -289,7 +255,7 @@ function ListingDetail() {
 					item
 					container
 					justifyContent="center"
-					className={classes.sliderContainer}
+					style={{ position: "relative", marginTop: "1rem" }}
 				>
 					{listingPictures.map((picture, index) => {
 						return (
@@ -307,11 +273,31 @@ function ListingDetail() {
 					})}
 					<ArrowCircleLeftIcon
 						onClick={PreviousPicture}
-						className={classes.leftArrow}
+						style={{
+							position: "absolute",
+							cursor: "pointer",
+							fontSize: "3rem",
+							color: "white",
+							top: "50%",
+							left: "27.5%",
+							"&:hover": {
+								backgroundColor: "green",
+							},
+						}}
 					/>
 					<ArrowCircleRightIcon
 						onClick={NextPicture}
-						className={classes.rightArrow}
+						style={{
+							position: "absolute",
+							cursor: "pointer",
+							fontSize: "3rem",
+							color: "white",
+							top: "50%",
+							right: "27.5%",
+							"&:hover": {
+								backgroundColor: "green",
+							},
+						}}
 					/>
 				</Grid>
 			) : (

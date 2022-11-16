@@ -1,25 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({
-	divStyle: {
-		width: "100%",
-		border: "2px solid red",
-		padding: "15px",
-	},
-
-	btnStyle: {
-		backgroundColor: "yellow",
-	},
-});
 
 function CustomCard() {
 	const [btnColor, setBtnColor] = useState("error");
-	const classes = useStyles();
+
 	return (
-		<div className={classes.divStyle}>
+		<div style={{ width: "100%", border: "2px solid red", padding: "15px" }}>
 			<Typography variant="h4">This is the title</Typography>
 			<Typography variant="body1">
 				It is a long established fact that a reader will be distracted by the
@@ -36,7 +23,7 @@ function CustomCard() {
 				onClick={() => setBtnColor("success")}
 				variant="contained"
 				size="medium"
-				className={classes.btnStyle}
+				style={{ backgroundColor: "yellow" }}
 			>
 				GO
 			</Button>

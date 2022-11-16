@@ -17,34 +17,12 @@ import {
 	Snackbar,
 	Alert,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 
 // Contexts
 import DispatchContext from "../Contexts/DispatchContext";
 import StateContext from "../Contexts/StateContext";
 
-const useStyles = makeStyles({
-	formContainer: {
-		width: "50%",
-		marginLeft: "auto",
-		marginRight: "auto",
-		marginTop: "3rem",
-		border: "5px solid black",
-		padding: "3rem",
-	},
-	loginBtn: {
-		backgroundColor: "green",
-		color: "white",
-		fontSize: "1.1rem",
-		marginLeft: "1rem",
-		"&:hover": {
-			backgroundColor: "blue",
-		},
-	},
-});
-
 function Activation() {
-	const classes = useStyles();
 	const navigate = useNavigate();
 	const params = useParams();
 
@@ -65,7 +43,16 @@ function Activation() {
 	}
 
 	return (
-		<div className={classes.formContainer}>
+		<div
+			style={{
+				width: "50%",
+				marginLeft: "auto",
+				marginRight: "auto",
+				marginTop: "3rem",
+				border: "5px solid black",
+				padding: "3rem",
+			}}
+		>
 			<Typography variant="h4">
 				Please click on the button below to activate your account!
 			</Typography>

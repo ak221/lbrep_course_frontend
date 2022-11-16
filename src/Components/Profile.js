@@ -28,37 +28,7 @@ import {
 	Checkbox,
 } from "@mui/material";
 
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({
-	formContainer: {
-		width: "50%",
-		marginLeft: "auto",
-		marginRight: "auto",
-		marginTop: "3rem",
-		border: "5px solid black",
-		padding: "3rem",
-	},
-	loginBtn: {
-		backgroundColor: "green",
-		color: "white",
-		fontSize: "1.1rem",
-		marginLeft: "1rem",
-		"&:hover": {
-			backgroundColor: "blue",
-		},
-	},
-	picturesBtn: {
-		backgroundColor: "blue",
-		color: "white",
-		fontSize: "0.8rem",
-		border: "1px solid black",
-		marginLeft: "1rem",
-	},
-});
-
 function Profile() {
-	const classes = useStyles();
 	const navigate = useNavigate();
 	const GlobalState = useContext(StateContext);
 

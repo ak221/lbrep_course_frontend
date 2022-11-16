@@ -29,12 +29,7 @@ import {
 	CardActions,
 } from "@mui/material";
 
-import { makeStyles } from "@mui/styles";
-
-const useStyles = makeStyles({});
-
 function Agencies() {
-	const classes = useStyles();
 	const navigate = useNavigate();
 	const GlobalState = useContext(StateContext);
 
