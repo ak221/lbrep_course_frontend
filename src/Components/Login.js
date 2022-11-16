@@ -234,9 +234,9 @@ function Login() {
 							color: "white",
 							fontSize: "1.1rem",
 							marginLeft: "1rem",
-							"&:hover": {
-								backgroundColor: "blue",
-							},
+							// "&:hover": {
+							// 	backgroundColor: "blue",
+							// },
 						}}
 						disabled={state.disabledBtn}
 					>

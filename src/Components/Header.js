@@ -100,10 +100,10 @@ function Header() {
 							color: "white",
 							width: "15rem",
 							fontSize: "1.1rem",
-							marginRight: "1rem",
-							"&:hover": {
-								backgroundColor: "blue",
-							},
+							// marginRight: "1rem",
+							// "&:hover": {
+							// 	backgroundColor: "blue",
+							// },
 						}}
 					>
 						Add Property
@@ -117,9 +117,9 @@ function Header() {
 								width: "15rem",
 								fontSize: "1.1rem",
 								marginLeft: "1rem",
-								"&:hover": {
-									backgroundColor: "green",
-								},
+								// "&:hover": {
+								// 	backgroundColor: "green",
+								// },
 							}}
 							onClick={handleClick}
 							// onClick={() => navigate("/login")}
@@ -134,9 +134,9 @@ function Header() {
 								width: "15rem",
 								fontSize: "1.1rem",
 								marginLeft: "1rem",
-								"&:hover": {
-									backgroundColor: "green",
-								},
+								// "&:hover": {
+								// 	backgroundColor: "green",
+								// },
 							}}
 							onClick={() => navigate("/login")}
 						>

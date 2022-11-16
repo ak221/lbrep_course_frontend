@@ -280,9 +280,9 @@ function ListingDetail() {
 							color: "white",
 							top: "50%",
 							left: "27.5%",
-							"&:hover": {
-								backgroundColor: "green",
-							},
+							// "&:hover": {
+							// 	backgroundColor: "green",
+							// },
 						}}
 					/>
 					<ArrowCircleRightIcon
@@ -294,9 +294,9 @@ function ListingDetail() {
 							color: "white",
 							top: "50%",
 							right: "27.5%",
-							"&:hover": {
-								backgroundColor: "green",
-							},
+							// "&:hover": {
+							// 	backgroundColor: "green",
+							// },
 						}}
 					/>
 				</Grid>
