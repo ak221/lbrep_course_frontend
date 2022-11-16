@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import React, { useEffect } from "react";
 import { useImmerReducer } from "use-immer";
 // MUI imports
-import { StyledEngineProvider } from "@mui/material/styles";
+// import { StyledEngineProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 
 // Components
@@ -69,26 +69,26 @@ function App() {
 	return (
 		<StateContext.Provider value={state}>
 			<DispatchContext.Provider value={dispatch}>
-				<StyledEngineProvider injectFirst>
-					<BrowserRouter>
-						<CssBaseline />
-						<Header />
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/activate/:uid/:token" element={<Activation />} />
-							<Route path="/login" element={<Login />} />
-							<Route path="/created" element={<AccountCreated />} />
-							<Route path="/register" element={<Register />} />
-							<Route path="/addproperty" element={<AddProperty />} />
-							<Route path="/profile" element={<Profile />} />
-							<Route path="/agencies" element={<Agencies />} />
-							<Route path="/agencies/:id" element={<AgencyDetail />} />
-							<Route path="/listings/:id" element={<ListingDetail />} />
-							<Route path="/listings" element={<Listings />} />
-							<Route path="/testing" element={<Testing />} />
-						</Routes>
-					</BrowserRouter>
-				</StyledEngineProvider>
+				{/* <StyledEngineProvider injectFirst> */}
+				<BrowserRouter>
+					<CssBaseline />
+					<Header />
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/activate/:uid/:token" element={<Activation />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/created" element={<AccountCreated />} />
+						<Route path="/register" element={<Register />} />
+						<Route path="/addproperty" element={<AddProperty />} />
+						<Route path="/profile" element={<Profile />} />
+						<Route path="/agencies" element={<Agencies />} />
+						<Route path="/agencies/:id" element={<AgencyDetail />} />
+						<Route path="/listings/:id" element={<ListingDetail />} />
+						<Route path="/listings" element={<Listings />} />
+						<Route path="/testing" element={<Testing />} />
+					</Routes>
+				</BrowserRouter>
+				{/* </StyledEngineProvider> */}
 			</DispatchContext.Provider>
 		</StateContext.Provider>
 	);
