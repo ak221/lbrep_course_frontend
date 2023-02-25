@@ -30,7 +30,7 @@ function AccountCreated() {
 
 	return (
 		<div
-			style={{
+			sx={{
 				width: "50%",
 				marginLeft: "auto",
 				marginRight: "auto",

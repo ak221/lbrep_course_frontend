@@ -1071,7 +1071,7 @@ function AddProperty() {
 					variant="contained"
 					fullWidth
 					type="submit"
-					style={{
+					sx={{
 						backgroundColor: "green",
 						color: "white",
 						fontSize: "1.1rem",
@@ -1096,7 +1096,7 @@ function AddProperty() {
 				<Button
 					variant="outlined"
 					fullWidth
-					style={{
+					sx={{
 						backgroundColor: "green",
 						color: "white",
 						fontSize: "1.1rem",
@@ -1116,7 +1116,7 @@ function AddProperty() {
 					variant="outlined"
 					fullWidth
 					onClick={() => navigate("/login")}
-					style={{
+					sx={{
 						backgroundColor: "green",
 						color: "white",
 						fontSize: "1.1rem",
@@ -1156,7 +1156,7 @@ function AddProperty() {
 					<Typography variant="h4">SUBMIT A PROPERTY</Typography>
 				</Grid>
 
-				<Grid item container style={{ marginTop: "1rem" }}>
+				<Grid item container sx={{ marginTop: "1rem" }}>
 					<TextField
 						id="title"
 						label="Title*"
@@ -1181,7 +1181,7 @@ function AddProperty() {
 				</Grid>
 
 				<Grid item container justifyContent="space-between">
-					<Grid item xs={5} style={{ marginTop: "1rem" }}>
+					<Grid item xs={5} sx={{ marginTop: "1rem" }}>
 						<TextField
 							id="listingType"
 							label="Listing Type*"
@@ -1215,7 +1215,7 @@ function AddProperty() {
 						</TextField>
 					</Grid>
 
-					<Grid item xs={5} style={{ marginTop: "1rem" }}>
+					<Grid item xs={5} sx={{ marginTop: "1rem" }}>
 						<TextField
 							id="propertyStatus"
 							label="Property Status*"
@@ -1251,7 +1251,7 @@ function AddProperty() {
 				</Grid>
 
 				<Grid item container justifyContent="space-between">
-					<Grid item xs={5} style={{ marginTop: "1rem" }}>
+					<Grid item xs={5} sx={{ marginTop: "1rem" }}>
 						<TextField
 							id="rentalFrequency"
 							label="Rental Frequency"
@@ -1278,7 +1278,7 @@ function AddProperty() {
 						</TextField>
 					</Grid>
 
-					<Grid item xs={5} style={{ marginTop: "1rem" }}>
+					<Grid item xs={5} sx={{ marginTop: "1rem" }}>
 						<TextField
 							id="price"
 							type="number"
@@ -1304,7 +1304,7 @@ function AddProperty() {
 					</Grid>
 				</Grid>
 
-				<Grid item container style={{ marginTop: "1rem" }}>
+				<Grid item container sx={{ marginTop: "1rem" }}>
 					<TextField
 						id="description"
 						label="Description"
@@ -1325,7 +1325,7 @@ function AddProperty() {
 				{state.listingTypeValue === "Office" ? (
 					""
 				) : (
-					<Grid item xs={3} container style={{ marginTop: "1rem" }}>
+					<Grid item xs={3} container sx={{ marginTop: "1rem" }}>
 						<TextField
 							id="rooms"
 							label="Rooms"
@@ -1344,7 +1344,7 @@ function AddProperty() {
 				)}
 
 				<Grid item container justifyContent="space-between">
-					<Grid item xs={2} style={{ marginTop: "1rem" }}>
+					<Grid item xs={2} sx={{ marginTop: "1rem" }}>
 						<FormControlLabel
 							control={
 								<Checkbox
@@ -1361,7 +1361,7 @@ function AddProperty() {
 						/>
 					</Grid>
 
-					<Grid item xs={2} style={{ marginTop: "1rem" }}>
+					<Grid item xs={2} sx={{ marginTop: "1rem" }}>
 						<FormControlLabel
 							control={
 								<Checkbox
@@ -1378,7 +1378,7 @@ function AddProperty() {
 						/>
 					</Grid>
 
-					<Grid item xs={2} style={{ marginTop: "1rem" }}>
+					<Grid item xs={2} sx={{ marginTop: "1rem" }}>
 						<FormControlLabel
 							control={
 								<Checkbox
@@ -1395,7 +1395,7 @@ function AddProperty() {
 						/>
 					</Grid>
 
-					<Grid item xs={2} style={{ marginTop: "1rem" }}>
+					<Grid item xs={2} sx={{ marginTop: "1rem" }}>
 						<FormControlLabel
 							control={
 								<Checkbox
@@ -1412,7 +1412,7 @@ function AddProperty() {
 						/>
 					</Grid>
 
-					<Grid item xs={2} style={{ marginTop: "1rem" }}>
+					<Grid item xs={2} sx={{ marginTop: "1rem" }}>
 						<FormControlLabel
 							control={
 								<Checkbox
@@ -1431,7 +1431,7 @@ function AddProperty() {
 				</Grid>
 
 				<Grid item container justifyContent="space-between">
-					<Grid item xs={5} style={{ marginTop: "1rem" }}>
+					<Grid item xs={5} sx={{ marginTop: "1rem" }}>
 						<TextField
 							id="area"
 							label="Area*"
@@ -1465,7 +1465,7 @@ function AddProperty() {
 						</TextField>
 					</Grid>
 
-					<Grid item xs={5} style={{ marginTop: "1rem" }}>
+					<Grid item xs={5} sx={{ marginTop: "1rem" }}>
 						<TextField
 							id="borough"
 							label="Borough*"
@@ -1511,7 +1511,7 @@ function AddProperty() {
 				</Grid>
 
 				{/* Map */}
-				<Grid item style={{ marginTop: "1rem" }}>
+				<Grid item sx={{ marginTop: "1rem" }}>
 					{state.latitudeValue && state.longitudeValue ? (
 						<Alert severity="success">
 							You property is located @ {state.latitudeValue},{" "}
@@ -1523,7 +1523,7 @@ function AddProperty() {
 						</Alert>
 					)}
 				</Grid>
-				<Grid item container style={{ height: "35rem", marginTop: "1rem" }}>
+				<Grid item container sx={{ height: "35rem", marginTop: "1rem" }}>
 					<MapContainer
 						center={[51.505, -0.09]}
 						zoom={14}
@@ -1549,13 +1549,13 @@ function AddProperty() {
 					item
 					container
 					xs={6}
-					style={{ marginTop: "1rem", marginLeft: "auto", marginRight: "auto" }}
+					sx={{ marginTop: "1rem", marginLeft: "auto", marginRight: "auto" }}
 				>
 					<Button
 						variant="contained"
 						component="label"
 						fullWidth
-						style={{
+						sx={{
 							backgroundColor: "blue",
 							color: "white",
 							fontSize: "0.8rem",
@@ -1593,7 +1593,7 @@ function AddProperty() {
 					item
 					container
 					xs={8}
-					style={{ marginTop: "1rem", marginLeft: "auto", marginRight: "auto" }}
+					sx={{ marginTop: "1rem", marginLeft: "auto", marginRight: "auto" }}
 				>
 					{SubmitButtonDisplay()}
 				</Grid>

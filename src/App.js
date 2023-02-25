@@ -72,10 +72,10 @@ function App() {
 				{/* <StyledEngineProvider injectFirst> */}
 				<BrowserRouter>
 					<CssBaseline />
-					<Header />
+					{/* <Header /> */}
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/activate/:uid/:token" element={<Activation />} />
+						{/* <Route path="/activate/:uid/:token" element={<Activation />} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/created" element={<AccountCreated />} />
 						<Route path="/register" element={<Register />} />
@@ -85,7 +85,7 @@ function App() {
 						<Route path="/agencies/:id" element={<AgencyDetail />} />
 						<Route path="/listings/:id" element={<ListingDetail />} />
 						<Route path="/listings" element={<Listings />} />
-						<Route path="/testing" element={<Testing />} />
+						<Route path="/testing" element={<Testing />} /> */}
 					</Routes>
 				</BrowserRouter>
 				{/* </StyledEngineProvider> */}

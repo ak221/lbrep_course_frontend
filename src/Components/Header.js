@@ -68,7 +68,7 @@ function Header() {
 	}, [openSnack]);
 
 	return (
-		<AppBar position="static" style={{ backgroundColor: "black" }}>
+		<AppBar position="static" sx={{ backgroundColor: "black" }}>
 			<Toolbar>
 				<div style={{ marginRight: "auto" }}>
 					<Button color="inherit" onClick={() => navigate("/")}>
@@ -79,13 +79,14 @@ function Header() {
 					<Button
 						color="inherit"
 						onClick={() => navigate("/listings")}
-						style={{ marginRight: "2rem" }}
+						sx={{ marginRight: "2rem" }}
 					>
 						<Typography variant="h6">Listings</Typography>{" "}
 					</Button>
+
 					<Button
 						color="inherit"
-						style={{ marginLeft: "2rem" }}
+						sx={{ marginLeft: "2rem" }}
 						onClick={() => navigate("/agencies")}
 					>
 						{" "}
@@ -95,15 +96,15 @@ function Header() {
 				<div style={{ marginLeft: "auto", marginRight: "10rem" }}>
 					<Button
 						onClick={() => navigate("/addproperty")}
-						style={{
+						sx={{
 							backgroundColor: "green",
 							color: "white",
 							width: "15rem",
 							fontSize: "1.1rem",
-							// marginRight: "1rem",
-							// "&:hover": {
-							// 	backgroundColor: "blue",
-							// },
+							marginRight: "1rem",
+							"&:hover": {
+								backgroundColor: "blue",
+							},
 						}}
 					>
 						Add Property
@@ -111,15 +112,15 @@ function Header() {
 
 					{GlobalState.userIsLogged ? (
 						<Button
-							style={{
+							sx={{
 								backgroundColor: "white",
 								color: "black",
 								width: "15rem",
 								fontSize: "1.1rem",
 								marginLeft: "1rem",
-								// "&:hover": {
-								// 	backgroundColor: "green",
-								// },
+								"&:hover": {
+									backgroundColor: "green",
+								},
 							}}
 							onClick={handleClick}
 							// onClick={() => navigate("/login")}
@@ -128,15 +129,15 @@ function Header() {
 						</Button>
 					) : (
 						<Button
-							style={{
+							sx={{
 								backgroundColor: "white",
 								color: "black",
 								width: "15rem",
 								fontSize: "1.1rem",
 								marginLeft: "1rem",
-								// "&:hover": {
-								// 	backgroundColor: "green",
-								// },
+								"&:hover": {
+									backgroundColor: "green",
+								},
 							}}
 							onClick={() => navigate("/login")}
 						>
@@ -154,7 +155,7 @@ function Header() {
 						}}
 					>
 						<MenuItem
-							style={{
+							sx={{
 								color: "black",
 								backgroundColor: "green",
 								width: "15rem",
@@ -167,7 +168,7 @@ function Header() {
 							Profile
 						</MenuItem>
 						<MenuItem
-							style={{
+							sx={{
 								color: "black",
 								backgroundColor: "red",
 								width: "15rem",

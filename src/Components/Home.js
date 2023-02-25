@@ -16,7 +16,7 @@ function Home() {
 
 	return (
 		<>
-			<div style={{ position: "relative" }}>
+			{/* <div style={{ position: "relative" }}>
 				<img src={city} style={{ width: "100%", height: "92vh" }} />
 				<div
 					style={{
@@ -47,6 +47,20 @@ function Home() {
 						SEE ALL PROPERTIES
 					</Button>
 				</div>
+			</div> */}
+			<div
+				style={{
+					backgroundColor: "lightgray",
+					width: "100%",
+					height: "100vh",
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					fontSize: "3rem",
+					fontWeight: "bolder",
+				}}
+			>
+				WEBSITE UNDER MAINTENANCE...COMING BACK SOON!
 			</div>
 		</>
 	);

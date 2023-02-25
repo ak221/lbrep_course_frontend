@@ -44,7 +44,7 @@ function Activation() {
 
 	return (
 		<div
-			style={{
+			sx={{
 				width: "50%",
 				marginLeft: "auto",
 				marginRight: "auto",
@@ -59,7 +59,7 @@ function Activation() {
 			<Button
 				variant="contained"
 				fullWidth
-				style={{ marginTop: "1rem" }}
+				sx={{ marginTop: "1rem" }}
 				onClick={ActivationHandler}
 			>
 				ACTIVATE
